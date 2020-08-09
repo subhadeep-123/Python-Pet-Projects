@@ -3,8 +3,8 @@ import hashlib
 import sys
 
 
-def request_api_data(query_char):
-    url = 'https://api.pwnedpasswords.com/range/' + query_char
+def request_api_data(query):
+    url = 'https://api.pwnedpasswords.com/range/' + query
     res = requests.get(url)
     if res.status_code != 200:
         raise RuntimeError(
